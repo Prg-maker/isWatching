@@ -6,6 +6,7 @@ export class VisualizationUseCase{
   ){}
 
   async execute(){
-    await this.prismaVisualizationRepository.create()
+    const visualization = await this.prismaVisualizationRepository.create()
+    return visualization
   }
 }

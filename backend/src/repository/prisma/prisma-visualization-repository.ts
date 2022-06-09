@@ -1,11 +1,9 @@
-import {VisualizationData, VisualizationRepository} from '../visualization-repository'
+import {VisualizationRepository , VisualizationData} from '../visualization-repository'
 import {prisma} from '../../prisma'
 
 interface Return {
-  id:string;
   visualization: number
 }
-
 
 export class PrismaVisualizationRepository implements VisualizationRepository{
   async create(){
@@ -14,13 +12,15 @@ export class PrismaVisualizationRepository implements VisualizationRepository{
 
     const valor = visualization + 1
 
-    await prisma.visualization.update({
+    const visualizationData =  await prisma.visualization.update({
       where:{
         id:"00ec84bf-cdc6-4c14-904f-48b71aec7b29"
       },
       data:{
         visualization: valor
       }
-    })
+    }) as Return
+
+    return visualizationData
   }
 }

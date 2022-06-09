@@ -3,6 +3,6 @@ export interface VisualizationData{
 }
 
 export interface VisualizationRepository{
-  create:()=> Promise<void>
+  create:()=> Promise<VisualizationData>
 }
 
