@@ -1,4 +1,4 @@
-import { IsWatching } from "./components/IsWatchin"
+import { IsWatching } from "./components/IsWatching"
 import GlobalStyles from "./styles/GlobalStyles"
 
 function App() {

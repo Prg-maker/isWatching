@@ -13,30 +13,37 @@ export const Content = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 0 2rem 2rem 0;
+  margin: 0 0.5rem 1rem 0;
 
   display: flex;
   align-items: flex-end;
   justify-content: center;
   gap: 0.5rem;
 
+  svg{
+
+    color: #000;
+    z-index: 10;
+    position: relative;
+    right: -100px;
+
+  }
+
   &:hover{
     p{
-      display: block;
       animation-name:Title;
       animation-duration:1s;
+      opacity: 1;
+
     }
     svg{
       opacity: 1;
+      right: 0px;
+      transition: 1s;
     }
   }
 
-  svg{
-    opacity: 0.7;
-    color: #000;
-    z-index: 10;
-    
-  }
+  
   
   @keyframes Title {
     0%{
@@ -48,21 +55,18 @@ export const Content = styled.div`
 
   }
 
-  @keyframes svg {
-    to{
-      transform: translateX(100%);
-    }
-    from{
-      transform: translateX(100%);
-    };
 
-  }
+
+  
 `
 
 export const Title = styled.p`
   color: #000;
-  gap: 5rem;
+  gap: 0.5rem;
   padding-bottom: 5px;
-  display: none;
-  
+  position: relative;
+  display: flex;
+  left: -10px;
+  opacity: 0;
+
 `
