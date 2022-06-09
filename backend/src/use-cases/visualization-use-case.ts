@@ -7,6 +7,5 @@ export class VisualizationUseCase{
 
   async execute(){
     await this.prismaVisualizationRepository.create()
-    
   }
 }
