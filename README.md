@@ -6,7 +6,7 @@
 - mostra as visualizaçoes.
 
 # bugs
- - [] por conta que a web faz duas requisições na página, então ele mostrar 2x mais.
+ - [ ] por conta que a web faz duas requisições na página, então ele mostrar 2x mais.
  
 # melhorias 
- - [] construir o modo dark e ligth.
+ - [ ] construir o modo dark e ligth.
