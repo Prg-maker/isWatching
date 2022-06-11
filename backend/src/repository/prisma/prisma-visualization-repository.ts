@@ -10,7 +10,7 @@ export class PrismaVisualizationRepository implements VisualizationRepository{
 
     const {visualization} = await prisma.visualization.findFirst() as Return
 
-    const valor = visualization + 1
+    const valor = visualization  +1
 
     const visualizationData =  await prisma.visualization.update({
       where:{
@@ -20,6 +20,7 @@ export class PrismaVisualizationRepository implements VisualizationRepository{
         visualization: valor
       }
     }) as Return
+    console.log(visualizationData)
 
     return visualizationData
   }
