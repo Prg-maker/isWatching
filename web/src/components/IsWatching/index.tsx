@@ -19,19 +19,20 @@ interface PropsVisualization{
 }
 
 export function IsWatching(){
-  const [visualization , setVisualization] = useState<PropsVisualization>() 
+  const [visualization , setVisualization] = useState<PropsVisualization | any>(undefined) 
 
   useEffect(  ()=> {
 
     async function get(){
       const {data } = await api.get('/')  as Props
-
-      setVisualization(data)
+      
+      setVisualization(data )
     }
 
     get()
 
   } , [])
+  let number = visualization?.visualization - 1
 
   return(
     <Container>
@@ -39,7 +40,7 @@ export function IsWatching(){
       <Content>
         <HandEye size={32} weight="bold"/>
 
-        <Title><strong>{visualization?.visualization}</strong> visualizações</Title>
+        <Title><strong>{number }</strong> visualizações</Title>
       </Content>
     
     </Container>
