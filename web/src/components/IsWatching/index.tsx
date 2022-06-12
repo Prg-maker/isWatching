@@ -7,7 +7,9 @@ import {
 import { HandEye } from 'phosphor-react'
 import { api } from '../../services/api'
 import { useEffect, useState } from 'react'
-    
+
+
+
 interface Props{
   data:{
     visualization: Number
@@ -18,13 +20,21 @@ interface PropsVisualization{
   visualization: Number
 }
 
-export function IsWatching(){
-  const [visualization , setVisualization] = useState<PropsVisualization | any>(undefined) 
+interface PropsIsWatching{
+  ToggleTheme: ()=> void
+}
+
+export function IsWatching({
+  ToggleTheme
+}:PropsIsWatching){
+  const [visualization , setVisualization] = useState<PropsVisualization | any>() 
 
   useEffect(  ()=> {
 
     async function get(){
       const {data } = await api.get('/')  as Props
+
+      
       
       setVisualization(data )
     }
@@ -32,15 +42,19 @@ export function IsWatching(){
     get()
 
   } , [])
-  let number = visualization?.visualization - 1
+
+  let number = visualization?.visualization 
+
 
   return(
-    <Container>
+    <Container >
+        <button onClick={ToggleTheme} style={{
+          background: 'red',
+        }}>Toggle theme</button>
 
       <Content>
         <HandEye size={32} weight="bold"/>
-
-        <Title><strong>{number }</strong> visualizações</Title>
+        <Title><strong>{number  }</strong> visualizações</Title>
       </Content>
     
     </Container>

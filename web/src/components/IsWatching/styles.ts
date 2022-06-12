@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 100%;
-  background-color: #fff;
-  position: relative;
+  background-color: ${props=> props.theme.colors.backgroundColor}; /*variable*/ 
 
  
 `;
@@ -22,7 +21,7 @@ export const Content = styled.div`
 
   svg{
 
-    color: #000;
+    color: ${props=> props.theme.colors.title}; /*variable*/ 
     z-index: 10;
     position: relative;
     right: -100px;
@@ -61,7 +60,7 @@ export const Content = styled.div`
 `
 
 export const Title = styled.p`
-  color: #000;
+  color: ${props=> props.theme.colors.title}; /*variable*/ 
   gap: 0.5rem;
   padding-bottom: 5px;
   position: relative;
