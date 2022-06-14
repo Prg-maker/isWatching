@@ -15,7 +15,7 @@ function App() {
     setTheme(!theme)
 
   }
-  console.log(theme)
+  console.log(ligth)
 
 
   return (

@@ -3,7 +3,12 @@ export default {
 
   colors:{
     backgroundColor: '#000',
-    title: '#fff'
+    title: '#fff',
+
+    backgroundColorButton: '#fff',
+    titleButton: '#100F0F'
+
+    
   },
 
 

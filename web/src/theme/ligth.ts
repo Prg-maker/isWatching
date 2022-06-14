@@ -4,6 +4,11 @@ export default {
 
   colors:{
     backgroundColor: '#fff',
-    title: '#000'
+    title: '#000',
+
+
+    backgroundColorButton: '#100F0F',
+    titleButton: '#fff'
+
   }
 }

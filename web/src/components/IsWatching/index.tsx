@@ -1,7 +1,8 @@
 import {
   Container,
   Content,
-  Title
+  Title,
+  ToggleBackground
 } from './styles'
     
 import { HandEye } from 'phosphor-react'
@@ -48,9 +49,7 @@ export function IsWatching({
 
   return(
     <Container >
-        <button onClick={ToggleTheme} style={{
-          background: 'red',
-        }}>Toggle theme</button>
+        <ToggleBackground onClick={ToggleTheme} >Toggle theme</ToggleBackground>
 
       <Content>
         <HandEye size={32} weight="bold"/>
