@@ -8,7 +8,8 @@ export default {
 
 
     backgroundColorButton: '#100F0F',
-    titleButton: '#fff'
+    titleButton: '#fff',
+    boxShadow: 'rgba(0, 0, 0, 0.25)'
 
   }
 }

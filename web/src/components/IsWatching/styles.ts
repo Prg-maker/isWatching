@@ -78,20 +78,17 @@ export const ToggleBackground = styled.button`
   height: 42px;
   outline: none;
   border-radius: 5px;
-  background-color: ${props => props.theme.colors};
-  color: #fff;
-  border: 0;
+  background-color: ${props => props.theme.colors.backgroundColorButton};
+  color: ${props => props.theme.colors.titleButton};
   
-
+  border: none;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 12px;
   cursor: pointer;
-  box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
-
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 4px 4px ${props=> props.theme.colors.boxShadow};
 
 
 
