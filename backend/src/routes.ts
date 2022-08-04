@@ -11,10 +11,14 @@ router.get('/', async (req, res)=> {
 
   try{
     const {visualization} =  await  visualizationUseCase.execute()
+    console.log('aqui1')
+
     return res.status(201).json({
       visualization: visualization
     })
+
   }catch(err){
+    console.log('aqui')
     return res.status(400).send()
   }
 

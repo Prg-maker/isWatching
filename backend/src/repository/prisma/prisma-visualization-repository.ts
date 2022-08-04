@@ -14,13 +14,12 @@ export class PrismaVisualizationRepository implements VisualizationRepository{
 
     const visualizationData =  await prisma.visualization.update({
       where:{
-        id:"00ec84bf-cdc6-4c14-904f-48b71aec7b29"
+        id:"3299872c-8a7d-4871-a56b-2ef67d7f62ee"
       },
       data:{
         visualization: valor
       }
     }) as Return
-    console.log(visualizationData)
 
     return visualizationData
   }
