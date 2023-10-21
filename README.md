@@ -10,4 +10,4 @@
  
 # melhorias 
  - [✔️] construir o modo dark e ligth.
- - [✔️] fiz também com react native. 
+ 
